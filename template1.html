@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<p>
+    {% macro make_num_field(name, arr) %}
+    {% for item in list %}
+    <input type="number" name={{name}}_{{item}} value={{item}}>
+    {% endfor %}
+    {% endmacro %}
+    {{ make_num_field(name, arr) }}
+</p>
+</body>
+</html>
